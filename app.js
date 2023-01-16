@@ -7,6 +7,11 @@ let arithPressed = false;
 
 //Assigning click listeners to all number buttons
 document.querySelector("#oneBtn").addEventListener("click", (e) => {
+    //This control flow switches the CSS of the screen so there isnt a size change when numbers are on the screen versus an empty screen
+    // if (screenValue === "") {
+    //     document.getElementById("calculatorScreenBottomNoNumbers").id = "calculatorScreenBottomWithNumbers"
+    // }
+    
     if (arithPressed === false) {
         document.getElementById("screenValue").innerHTML += e.target.value;
         screenValue += e.target.value;

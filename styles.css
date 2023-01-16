@@ -1,26 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    position: relative;
+}
+
+#calculatorBody {
+    margin: 10% auto auto auto;
+    border: 2px solid black;
+    background-color: rgb(65, 120, 187);
+    height: 600px;
+    width: 500px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 2px;
+}
+
+#calculatorTop {
+    display: grid;
+    grid-template-rows: 1fr;
+    background-color: rgb(233, 231, 232);
+    margin: 20px 40px 40px 40px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 15px gray;
+}
+
+#calculatorScreenTop {
+    height: 30px;
+    width: 150px;
+    background-color: black;
+    margin: auto;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.solarBarSection {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.solarBarSection::after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: rgb(28, 24, 28);
+    display: inline-block;
+}
+
+.solarBarSection:first-child::after {
+    display: none;
+}
+
+#calculatorScreenBottom {
+    border-top: 0px solid rgb(233, 231, 232);
+    background-color: rgb(122, 137, 116);
+    margin: 20px 20px 20px 20px;
+    height: 75px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 15px rgb(30, 29, 29);
+    border-radius: 2px;
+
+}
+
+#calculatorScreenBottom > p {
+    margin: 5% 3% 5% auto;
+    text-align: right;
+    font-size: 30px;
+    font-family: "Orbitron", sans-serif;
+}
+
+.buttonRow {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 button {
     width: 60px;
     height: 60px;
     margin: 5px;
-}
-
-#calculatorBody {
-    border: 2px solid black;
-    background-color: gray;
-    height: 500px;
-    width: 400px;
-    display: grid;
-    grid-template-rows: .5fr 1fr;
-}
-
-#calculatorScreen {
-    border: 2px solid blue;
-    margin: 10px;
-}
-
-.buttonRow {
-    border: 2px solid black;
-    margin: 10px;
-    display: flex;
-    justify-content: space-evenly;
 }
